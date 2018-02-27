@@ -27,5 +27,6 @@ Pod::Spec.new do |spec|
     	'SWIFT_INCLUDE_PATHS' => '${BUILT_PRODUCTS_DIR}/SignalModuleMap, ${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap'
     }
     spec.resources = '$(BUILT_PRODUCTS_DIR)/**/*.modulemap'
+    spec.preserve_paths = '$(BUILT_PRODUCTS_DIR)/**/*.modulemap'
     
 end

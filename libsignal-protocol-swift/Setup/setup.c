@@ -7,7 +7,7 @@
 //
 
 #include "setup.h"
-#include "crypto_provider.h"
+#include "signal_protocol.h"
 
 #include <pthread.h>
 

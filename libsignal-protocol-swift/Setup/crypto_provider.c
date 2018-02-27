@@ -8,6 +8,8 @@
 
 #include "setup.h"
 
+#include "signal_protocol.h"
+
 #include <CommonCrypto/CommonDigest.h>
 #include <CommonCrypto/CommonHMAC.h>
 #include <CommonCrypto/CommonCryptor.h>
@@ -40,7 +42,7 @@ int test_decrypt(signal_buffer **output,
                  const uint8_t *ciphertext, size_t ciphertext_len,
                  void *user_data);
 
-int setup_crypto_provider(signal_context *context) {
+int setup_crypto_provider(void *context) {
     signal_crypto_provider provider = {
         .random_func = test_random_generator,
         .hmac_sha256_init_func = test_hmac_sha256_init,

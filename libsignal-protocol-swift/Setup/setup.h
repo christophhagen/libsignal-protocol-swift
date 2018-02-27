@@ -9,12 +9,10 @@
 #ifndef setup_h
 #define setup_h
 
-#include "signal_protocol.h"
-
 void *signal_setup(void);
 
 void signal_destroy(void *global_context);
 
-int setup_crypto_provider(signal_context *context);
+int setup_crypto_provider(void *context);
 
 #endif /* setup_h */

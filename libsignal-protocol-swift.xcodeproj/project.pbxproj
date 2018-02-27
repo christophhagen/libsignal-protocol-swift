@@ -722,7 +722,6 @@
 		CE7345B82037AC3E0011C67B /* KeyStoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7345B62037AC3E0011C67B /* KeyStoreWrapper.swift */; };
 		CE7345B92037AC3E0011C67B /* KeyStoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7345B62037AC3E0011C67B /* KeyStoreWrapper.swift */; };
 		CE7345BA2037AC3E0011C67B /* KeyStoreWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7345B62037AC3E0011C67B /* KeyStoreWrapper.swift */; };
-		CE7AA6A62035BBC800B9FC5E /* crypto_provider.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7AA6A42035BBC800B9FC5E /* crypto_provider.h */; };
 		CE7AA6A72035BBC800B9FC5E /* crypto_provider.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA6A52035BBC800B9FC5E /* crypto_provider.c */; };
 		CE7AA6AA2035BEF200B9FC5E /* setup.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7AA6A82035BEF200B9FC5E /* setup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE7AA6AB2035BEF200B9FC5E /* setup.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA6A92035BEF200B9FC5E /* setup.c */; };
@@ -738,9 +737,6 @@
 		CE8C63C52035C4AB00339944 /* crypto_provider.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA6A52035BBC800B9FC5E /* crypto_provider.c */; };
 		CE8C63C62035C4AD00339944 /* crypto_provider.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA6A52035BBC800B9FC5E /* crypto_provider.c */; };
 		CE8C63C72035C4AD00339944 /* crypto_provider.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7AA6A52035BBC800B9FC5E /* crypto_provider.c */; };
-		CE8C63C82035C4B100339944 /* crypto_provider.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7AA6A42035BBC800B9FC5E /* crypto_provider.h */; };
-		CE8C63C92035C4B200339944 /* crypto_provider.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7AA6A42035BBC800B9FC5E /* crypto_provider.h */; };
-		CE8C63CA2035C4B200339944 /* crypto_provider.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7AA6A42035BBC800B9FC5E /* crypto_provider.h */; };
 		CE8C63CB2035C73A00339944 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF5C992035B2BA004A4D28 /* Signal.swift */; };
 		CE8C63CC2035C73B00339944 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF5C992035B2BA004A4D28 /* Signal.swift */; };
 		CE8C63CD2035C73B00339944 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF5C992035B2BA004A4D28 /* Signal.swift */; };
@@ -1045,7 +1041,6 @@
 		CE40DC7020387710004FB880 /* GroupSessionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSessionBuilder.swift; sourceTree = "<group>"; };
 		CE4D2198203B46C0003C20C8 /* Fingerprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fingerprint.swift; sourceTree = "<group>"; };
 		CE7345B62037AC3E0011C67B /* KeyStoreWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStoreWrapper.swift; sourceTree = "<group>"; };
-		CE7AA6A42035BBC800B9FC5E /* crypto_provider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto_provider.h; sourceTree = "<group>"; };
 		CE7AA6A52035BBC800B9FC5E /* crypto_provider.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crypto_provider.c; sourceTree = "<group>"; };
 		CE7AA6A82035BEF200B9FC5E /* setup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = setup.h; sourceTree = "<group>"; };
 		CE7AA6A92035BEF200B9FC5E /* setup.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = setup.c; sourceTree = "<group>"; };
@@ -1425,7 +1420,6 @@
 			isa = PBXGroup;
 			children = (
 				CECF5C992035B2BA004A4D28 /* Signal.swift */,
-				CE7AA6A42035BBC800B9FC5E /* crypto_provider.h */,
 				CE7AA6A52035BBC800B9FC5E /* crypto_provider.c */,
 				CE7AA6A82035BEF200B9FC5E /* setup.h */,
 				CE7AA6A92035BEF200B9FC5E /* setup.c */,
@@ -1523,7 +1517,6 @@
 				CE1F0F8520346A19003F1C04 /* fingerprint.h in Headers */,
 				CE1F0DF520346A19003F1C04 /* gen_veddsa.h in Headers */,
 				CE1F0D7120346A19003F1C04 /* sqrtm1.h in Headers */,
-				CE7AA6A62035BBC800B9FC5E /* crypto_provider.h in Headers */,
 				CE1F0C46203467B3003F1C04 /* SignalProtocol.h in Headers */,
 				CE1F0FB520346A19003F1C04 /* utarray.h in Headers */,
 				CE1F0EC120346A19003F1C04 /* pow22523.h in Headers */,
@@ -1574,7 +1567,6 @@
 			files = (
 				CE1F0E2E20346A19003F1C04 /* compare.h in Headers */,
 				CE1F0EF220346A19003F1C04 /* crypto_int64.h in Headers */,
-				CE8C63C82035C4B100339944 /* crypto_provider.h in Headers */,
 				CE1F0F5620346A19003F1C04 /* LocalStorageProtocol.pb-c.h in Headers */,
 				CE1F0F9620346A19003F1C04 /* session_builder_internal.h in Headers */,
 				CE1F0D6220346A19003F1C04 /* curve25519-donna.h in Headers */,
@@ -1653,7 +1645,6 @@
 			files = (
 				CE1F0E2F20346A19003F1C04 /* compare.h in Headers */,
 				CE1F0EF320346A19003F1C04 /* crypto_int64.h in Headers */,
-				CE8C63C92035C4B200339944 /* crypto_provider.h in Headers */,
 				CE1F0F5720346A19003F1C04 /* LocalStorageProtocol.pb-c.h in Headers */,
 				CE1F0F9720346A19003F1C04 /* session_builder_internal.h in Headers */,
 				CE1F0D6320346A19003F1C04 /* curve25519-donna.h in Headers */,
@@ -1732,7 +1723,6 @@
 			files = (
 				CE1F0E3020346A19003F1C04 /* compare.h in Headers */,
 				CE1F0EF420346A19003F1C04 /* crypto_int64.h in Headers */,
-				CE8C63CA2035C4B200339944 /* crypto_provider.h in Headers */,
 				CE1F0F5820346A19003F1C04 /* LocalStorageProtocol.pb-c.h in Headers */,
 				CE1F0F9820346A19003F1C04 /* session_builder_internal.h in Headers */,
 				CE1F0D6420346A19003F1C04 /* curve25519-donna.h in Headers */,

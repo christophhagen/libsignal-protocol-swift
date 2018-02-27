@@ -24,9 +24,9 @@ Pod::Spec.new do |spec|
     spec.private_header_files = 'libsignal-protocol-swift/**/*.h'
 
     spec.pod_target_xcconfig = { 
-    	'SWIFT_INCLUDE_PATHS' => '$(BUILT_PRODUCTS_DIR)/SignalModuleMap', '$(BUILT_PRODUCTS_DIR)/CommonCryptoModuleMap'
+    	'SWIFT_INCLUDE_PATHS' => '$(BUILT_PRODUCTS_DIR)/SignalModuleMap',
+        'SWIFT_INCLUDE_PATHS' => '$(BUILT_PRODUCTS_DIR)/CommonCryptoModuleMap'
     }
-    spec.source_files = 'CommonCryptoModule/*.{h,swift}'
     spec.resources = '$(BUILT_PRODUCTS_DIR)/**/*.modulemap'
     
 end

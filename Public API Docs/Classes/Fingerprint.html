@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fingerprint Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Fingerprint" class="dashAnchor"></a>
+    <a title="Fingerprint Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/christophhagen/libsignal-protocol-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Fingerprint Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Fingerprint.html">Fingerprint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupCipher.html">GroupCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupSessionBuilder.html">GroupSessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionBuilder.html">SessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionCipher.html">SessionCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Signal.html">Signal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalAddress.html">SignalAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalSenderKeyName.html">SignalSenderKeyName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalStore.html">SignalStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SignalError.html">SignalError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/IdentityKeyStore.html">IdentityKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PreKeyStore.html">PreKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SenderKeyStore.html">SenderKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SessionStore.html">SessionStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SignedPreKeyStore.html">SignedPreKeyStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage.html">CiphertextMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage/MessageType.html">– MessageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/KeyPair.html">KeyPair</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKey.html">SessionPreKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKeyBundle.html">SessionPreKeyBundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionSignedPreKey.html">SessionSignedPreKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Fingerprint</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Fingerprint</span></code></pre>
+
+                </div>
+              </div>
+            <p>Fingerprints can be used to compare identity keys across devices.
+A fingerprint consists of a human readable string of numbers and
+a data that can be transmitted to another device (e.g. through a QR Code).</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintC11displayableSSv"></a>
+                    <a name="//apple_ref/swift/Property/displayable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintC11displayableSSv">displayable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A displayable string of numbers to compare fingerprints visually</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">displayable</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintC9scannable10Foundation4DataVv"></a>
+                    <a name="//apple_ref/swift/Property/scannable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintC9scannable10Foundation4DataVv">scannable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data that can be transmitted to another device</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">scannable</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20initialization"></a>
+                <a name="//apple_ref/swift/Section/Public initialization" class="dashAnchor"></a>
+                <a href="#/Public%20initialization">
+                  <h3 class="section-name">Public initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintCACSi10iterations_SS15localIdentifier10Foundation4DataV0E8IdentitySS06remoteF0AH0jI0tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(iterations:localIdentifier:localIdentity:remoteIdentifier:remoteIdentity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintCACSi10iterations_SS15localIdentifier10Foundation4DataV0E8IdentitySS06remoteF0AH0jI0tKcfc">init(iterations:localIdentifier:localIdentity:remoteIdentifier:remoteIdentity:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Construct a fingerprint (Version 0) generator for 60 digit numerics.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The higher the iteration count, the higher the security level:
+
+</div>
+<li>1024 iterations ~ 109.7 bits</li>
+<li>1400 iterations &gt; 110 bits</li>
+<li>5200 iterations &gt; 112 bits</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">iterations</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="nv">localIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">localIdentity</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
+        <span class="nv">remoteIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">remoteIdentity</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iterations</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of internal iterations to perform in the process of generating a fingerprint. This needs to be constant, and synchronized across all clients.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s <q>stable</q> identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote party&rsquo;s <q>stable</q> identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote party&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintCACSi10iterations_10Foundation4DataV13localIdentityAG06remoteH0tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(iterations:localIdentity:remoteIdentity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintCACSi10iterations_10Foundation4DataV13localIdentityAG06remoteH0tKcfc">init(iterations:localIdentity:remoteIdentity:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Construct a fingerprint (Version 1) generator for 60 digit numerics.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The higher the iteration count, the higher the security level:
+
+</div>
+<li>1024 iterations ~ 109.7 bits</li>
+<li>1400 iterations &gt; 110 bits</li>
+<li>5200 iterations &gt; 112 bits</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">iterations</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="nv">localIdentity</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
+        <span class="nv">remoteIdentity</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iterations</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of internal iterations to perform in the process of generating a fingerprint. This needs to be constant, and synchronized across all clients.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote party&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintCACSi10iterations_SS15localIdentifierSay10Foundation4DataVG0E12IdentityListSS06remoteF0AI0kiJ0tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(iterations:localIdentifier:localIdentityList:remoteIdentifier:remoteIdentityList:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintCACSi10iterations_SS15localIdentifierSay10Foundation4DataVG0E12IdentityListSS06remoteF0AI0kiJ0tKcfc">init(iterations:localIdentifier:localIdentityList:remoteIdentifier:remoteIdentityList:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generate a scannable and displayble fingerprint (Version 0) for a list of keys.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The higher the iteration count, the higher the security level:
+
+</div>
+<li>1024 iterations ~ 109.7 bits</li>
+<li>1400 iterations &gt; 110 bits</li>
+<li>5200 iterations &gt; 112 bits</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">iterations</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="nv">localIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">localIdentityList</span><span class="p">:</span> <span class="p">[</span><span class="kt">Data</span><span class="p">],</span>
+        <span class="nv">remoteIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">remoteIdentityList</span><span class="p">:</span> <span class="p">[</span><span class="kt">Data</span><span class="p">])</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iterations</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of internal iterations to perform in the process of generating a fingerprint. This needs to be constant, and synchronized across all clients.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s <q>stable</q> identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote party&rsquo;s <q>stable</q> identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote party&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintCACSi10iterations_Say10Foundation4DataVG17localIdentityListAH06remotehI0tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(iterations:localIdentityList:remoteIdentityList:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintCACSi10iterations_Say10Foundation4DataVG17localIdentityListAH06remotehI0tKcfc">init(iterations:localIdentityList:remoteIdentityList:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generate a scannable and displayble fingerprint (Version 1) for a list of keys.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The higher the iteration count, the higher the security level:
+
+</div>
+<li>1024 iterations ~ 109.7 bits</li>
+<li>1400 iterations &gt; 110 bits</li>
+<li>5200 iterations &gt; 112 bits</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">iterations</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="nv">localIdentityList</span><span class="p">:</span> <span class="p">[</span><span class="kt">Data</span><span class="p">],</span>
+        <span class="nv">remoteIdentityList</span><span class="p">:</span> <span class="p">[</span><span class="kt">Data</span><span class="p">])</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>iterations</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of internal iterations to perform in the process of generating a fingerprint. This needs to be constant, and synchronized across all clients.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s <q>stable</q> identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote party&rsquo;s <q>stable</q> identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteIdentity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The remote party&rsquo;s identity key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Comparison"></a>
+                <a name="//apple_ref/swift/Section/Comparison" class="dashAnchor"></a>
+                <a href="#/Comparison">
+                  <h3 class="section-name">Comparison</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintC7matchesSb10Foundation4DataV9scannable_tKF"></a>
+                    <a name="//apple_ref/swift/Method/matches(scannable:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintC7matchesSb10Foundation4DataV9scannable_tKF">matches(scannable:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Match a received/scanned fingerprint.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">matches</span><span class="p">(</span><span class="n"><a href="../Classes/Fingerprint.html#/s:14SignalProtocol11FingerprintC9scannable10Foundation4DataVv">scannable</a></span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fingerprint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The received scannable fingerprint data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the fingerprints match</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11FingerprintC7matchesSbAC9scannable_tKF"></a>
+                    <a name="//apple_ref/swift/Method/matches(scannable:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11FingerprintC7matchesSbAC9scannable_tKF">matches(scannable:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Match a received/scanned fingerprint.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">matches</span><span class="p">(</span><span class="n"><a href="../Classes/Fingerprint.html#/s:14SignalProtocol11FingerprintC9scannable10Foundation4DataVv">scannable</a></span> <span class="nv">fingerprint</span><span class="p">:</span> <span class="kt">Fingerprint</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fingerprint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The received scannable fingerprint</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the fingerprints match</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/christophhagen" target="_blank" rel="external">Christoph Hagen</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

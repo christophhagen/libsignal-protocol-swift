@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/christophhagen/libsignal-protocol-swift"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Fingerprint.html">Fingerprint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GroupCipher.html">GroupCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GroupSessionBuilder.html">GroupSessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionBuilder.html">SessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionCipher.html">SessionCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Signal.html">Signal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SignalAddress.html">SignalAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SignalSenderKeyName.html">SignalSenderKeyName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SignalStore.html">SignalStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SignalError.html">SignalError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/IdentityKeyStore.html">IdentityKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PreKeyStore.html">PreKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SenderKeyStore.html">SenderKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SessionStore.html">SessionStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/SignedPreKeyStore.html">SignedPreKeyStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/CiphertextMessage.html">CiphertextMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CiphertextMessage/MessageType.html">– MessageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/KeyPair.html">KeyPair</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SessionPreKey.html">SessionPreKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SessionPreKeyBundle.html">SessionPreKeyBundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SessionSignedPreKey.html">SessionSignedPreKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='overview' class='heading'>Overview</h1>
+
+<p>This is a wrapper framework to use <a href="https://github.com/signalapp/libsignal-protocol-c">libsignal-protocol-c</a> in Swift projects,
+which is a ratcheting forward secrecy protocol that works in synchronous and asynchronous messaging
+environments.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>TODO: Cocoapods setup</p>
+<h2 id='library-initialization' class='heading'>Library initialization</h2>
+
+<p>In contrast to <code>libsignal-protocol-c</code> there is no need to initialize a global
+context or do any other setup before usage. <code>libsignal-protocol-swift</code> uses
+the built-in <code>CommonCrypto</code> library for cryptographic functions. Simply:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SignalProtocol</span>
+</code></pre>
+<h2 id='client-install-time' class='heading'>Client install time</h2>
+
+<p>At install time, a <code>libsignal-protocol-swift</code> client needs to generate its identity keys,
+registration id, and prekeys.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">identityKeyPair</span> <span class="o">=</span> <span class="kt">Signal</span><span class="o">.</span><span class="nf">generateIdentityKeyPair</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">registrationId</span> <span class="o">=</span> <span class="kt">Signal</span><span class="o">.</span><span class="nf">generateRegistrationId</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">preKeys</span> <span class="o">=</span> <span class="kt">Signal</span><span class="o">.</span><span class="nf">generatePreKeys</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">signedPreKey</span> <span class="o">=</span> <span class="kt">Signal</span><span class="o">.</span><span class="nf">generate</span><span class="p">(</span><span class="nv">signedPreKey</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">identity</span><span class="p">:</span> <span class="n">identityKeyPair</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="cm">/* Store identityKeyPair somewhere durable and safe. */</span>
+<span class="cm">/* Store registrationId somewhere durable and safe. */</span>
+
+<span class="cm">/* Store pre keys in the pre key store, and */</span>
+<span class="cm">/* Store signed pre key in the signed pre key store. */</span>
+
+<span class="cm">/* Upload public identity key, public pre keys and public signed pre key to the server */</span>
+</code></pre>
+
+<p>The above example is simplified for the sake of clarity.</p>
+<h2 id='building-sessions-and-encrypting-decrypting-messages' class='heading'>Building sessions and encrypting/decrypting messages</h2>
+
+<p>A <code>libsignal-protocol-swift</code> client needs to implement four data store delegates:
+<code>IdentityKeyStore</code>, <code>PreKeyStore</code>,
+<code>SignedPreKeyStore</code>, and <code>SessionStore</code>.
+These will manage loading and storing of identity, prekeys, signed prekeys,
+and session state.</p>
+
+<p>The optional <code>SenderKeyStore</code> can be implemented for group messaging (necessary for <code>GroupSessionBuilder</code> and <code>GroupCipher</code>).</p>
+
+<p>These callback interfaces are designed such that implementations should treat
+all data flowing through them as opaque binary blobs. Anything necessary for
+referencing that data will be provided as separate function arguments to those
+callbacks.</p>
+
+<p>Once the callbacks for these data stores are implemented, building a session
+is fairly straightforward:</p>
+<pre class="highlight swift"><code><span class="cm">/* Create the store, and add all the delegates to it */</span>
+<span class="k">let</span> <span class="nv">store</span> <span class="o">=</span> <span class="kt">SignalStore</span><span class="p">(</span>
+    <span class="nv">identityStore</span><span class="p">:</span> <span class="n">myIdentityStore</span><span class="p">,</span>
+    <span class="nv">preKeyStore</span><span class="p">:</span> <span class="n">myPreKeyStore</span><span class="p">,</span>
+    <span class="nv">sessionStore</span><span class="p">:</span> <span class="n">mySessionStore</span><span class="p">,</span>
+    <span class="nv">signedPreKeyStore</span><span class="p">:</span> <span class="n">mySignedPrekeyStore</span><span class="p">,</span>
+    <span class="nv">senderKeyStore</span><span class="p">:</span> <span class="n">myOptionalSenderKeyStore</span><span class="p">)</span>
+</code></pre>
+<h3 id='building-a-session-with-a-downloaded-pre-key-bundle' class='heading'>Building a session with a downloaded pre key bundle</h3>
+<pre class="highlight swift"><code><span class="cm">/* Instantiate a session_builder for a recipient address. */</span>
+<span class="k">let</span> <span class="nv">address</span> <span class="o">=</span> <span class="kt">SignalAddress</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"+14159998888"</span><span class="p">,</span> <span class="nv">deviceId</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="cm">/* Build a session with a pre key retrieved from the server. */</span>
+<span class="k">try</span> <span class="kt">SessionBuilder</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="n">store</span><span class="p">)</span><span class="o">.</span><span class="nf">process</span><span class="p">(</span><span class="nv">preKeyBundle</span><span class="p">:</span> <span class="n">retrievedBundle</span><span class="p">)</span>
+
+<span class="cm">/* Create the session cipher and encrypt the message */</span>
+<span class="k">let</span> <span class="nv">cipher</span> <span class="o">=</span> <span class="kt">SessionCipher</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="n">store</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">encryptedMessage</span> <span class="o">=</span> <span class="k">try</span> <span class="n">cipher</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="cm">/* Get the serialized content and deliver it */</span>
+<span class="nf">deliver</span><span class="p">(</span><span class="n">encryptedMessage</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</code></pre>
+
+<p>The above example is simplified for the sake of clarity. Most of these functions return errors
+on failure, and those errors should be checked for in real usage.</p>
+<h3 id='building-a-session-with-a-received-pre-key-message' class='heading'>Building a session with a received pre key message</h3>
+
+<p>The other party can then build a session from the received message and decrypt the message content.</p>
+<pre class="highlight swift"><code><span class="cm">/* Create the session cipher and decrypt the serialized message */</span>
+<span class="k">let</span> <span class="nv">cipher</span> <span class="o">=</span> <span class="kt">SessionCipher</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="n">store</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">decryptedMessage</span> <span class="o">=</span> <span class="k">try</span> <span class="n">cipher</span><span class="o">.</span><span class="nf">decrypt</span><span class="p">(</span><span class="nv">preKeySignalMessage</span><span class="p">:</span> <span class="n">receivedMessage</span><span class="p">)</span>
+</code></pre>
+<h3 id='encrypting-in-an-established-session' class='heading'>Encrypting in an established session</h3>
+<pre class="highlight swift"><code><span class="cm">/* Create the session cipher and encrypt the message */</span>
+<span class="k">let</span> <span class="nv">cipher</span> <span class="o">=</span> <span class="kt">SessionCipher</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="n">store</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">encryptedMessage</span> <span class="o">=</span> <span class="k">try</span> <span class="n">cipher</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre>
+<h3 id='decrypting-in-an-established-session' class='heading'>Decrypting in an established session</h3>
+<pre class="highlight swift"><code><span class="cm">/* Create the session cipher and decrypt the serialized message */</span>
+<span class="k">let</span> <span class="nv">cipher</span> <span class="o">=</span> <span class="kt">SessionCipher</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="n">store</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">decryptedMessage</span> <span class="o">=</span> <span class="k">try</span> <span class="n">cipher</span><span class="o">.</span><span class="nf">decrypt</span><span class="p">(</span><span class="nv">signalMessage</span><span class="p">:</span> <span class="n">receivedMessage</span><span class="p">)</span>
+</code></pre>
+<h2 id='group-sessions' class='heading'>Group sessions</h2>
+
+<p><code>libsignal-protocol-swift</code> provides the ability to create unidirectional messages
+for a group identifier. This can be used for some group creator to update and
+establish groups, where the administrator can provide group updates and other clients
+can receive these messages.</p>
+<h3 id='building-a-group-session' class='heading'>Building a group session</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">groupSender</span> <span class="o">=</span> <span class="kt">SignalSenderKeyName</span><span class="p">(</span><span class="nv">groupId</span><span class="p">:</span> <span class="s">"my group name"</span><span class="p">,</span>
+                                      <span class="nv">sender</span><span class="p">:</span> <span class="kt">SignalAddress</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"+14150001111"</span><span class="p">,</span> <span class="nv">deviceId</span><span class="p">:</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="cm">/* Create the session builder */</span>
+<span class="k">let</span> <span class="nv">builder</span> <span class="o">=</span> <span class="kt">GroupSessionBuilder</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="n">myStore</span><span class="p">)</span>
+
+<span class="cm">/* Create a sender key distribution message */</span>
+<span class="k">let</span> <span class="nv">distributionMessage</span> <span class="o">=</span> <span class="k">try</span> <span class="n">builder</span><span class="o">.</span><span class="nf">createSession</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">groupSender</span><span class="p">)</span>
+
+<span class="cm">/* Transmit the message to the receiver */</span>
+<span class="nf">deliver</span><span class="p">(</span><span class="n">distributionMessage</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</code></pre>
+<h3 id='building-a-group-session-from-a-received-message' class='heading'>Building a group session from a received message</h3>
+<pre class="highlight swift"><code><span class="cm">/* Create the session builder */</span>
+<span class="k">let</span> <span class="nv">builder</span> <span class="o">=</span> <span class="kt">GroupSessionBuilder</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="n">myStore</span><span class="p">)</span>
+
+<span class="cm">/* Process the received message */</span>
+<span class="k">try</span> <span class="n">bobBuilder</span><span class="o">.</span><span class="nf">process</span><span class="p">(</span><span class="nv">senderKeyDistributionMessage</span><span class="p">:</span> <span class="n">distributionMessage</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">groupSender</span><span class="p">)</span>
+</code></pre>
+<h3 id='encrypting-in-an-established-group-session' class='heading'>Encrypting in an established group session</h3>
+<pre class="highlight swift"><code><span class="cm">/* Create the session cipher */</span>
+<span class="k">let</span> <span class="nv">cipher</span> <span class="o">=</span> <span class="kt">GroupCipher</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="n">myStore</span><span class="p">)</span>
+
+<span class="cm">/* Encrypt the message */</span>
+<span class="k">let</span> <span class="nv">encryptedMessage</span> <span class="o">=</span> <span class="k">try</span> <span class="n">cipher</span><span class="o">.</span><span class="nf">encrypt</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre>
+<h3 id='decrypting-in-an-established-group-session' class='heading'>Decrypting in an established group session</h3>
+<pre class="highlight swift"><code><span class="cm">/* Create the session cipher */</span>
+<span class="k">let</span> <span class="nv">cipher</span> <span class="o">=</span> <span class="kt">GroupCipher</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">address</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="n">myStore</span><span class="p">)</span>
+
+<span class="cm">/* Decrypt the message */</span>
+<span class="k">let</span> <span class="nv">decryptedMessage</span> <span class="o">=</span> <span class="k">try</span> <span class="n">cipher</span><span class="o">.</span><span class="nf">decrypt</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</code></pre>
+<h2 id='fingerprints' class='heading'>Fingerprints</h2>
+
+<p>It can be beneficial to compare identity fingerprints to protect against man-in-the-middle attacks.</p>
+<pre class="highlight swift"><code><span class="cm">/* Create fingerprint */</span>
+<span class="k">let</span> <span class="nv">fingerprint</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Fingerprint</span><span class="p">(</span><span class="nv">iterations</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span>
+            <span class="nv">localIdentifier</span><span class="p">:</span> <span class="n">aliceAddress</span><span class="p">,</span> <span class="nv">localIdentity</span><span class="p">:</span> <span class="n">alicePublicKey</span><span class="p">,</span>
+            <span class="nv">remoteIdentifier</span><span class="p">:</span> <span class="n">bobAddress</span><span class="p">,</span> <span class="nv">remoteIdentity</span><span class="p">:</span> <span class="n">bobPublicKey</span><span class="p">)</span>
+
+<span class="cm">/* Obtain scanned data from other device */</span>
+<span class="cm">/* Show fingerprint.displayable */</span>
+
+<span class="cm">/* Compare scanned fingerprint */</span>
+<span class="k">let</span> <span class="nv">equal</span> <span class="o">=</span> <span class="k">try</span> <span class="n">fingerprint</span><span class="o">.</span><span class="nf">matches</span><span class="p">(</span><span class="nv">scannable</span><span class="p">:</span> <span class="n">receivedFingerprint</span><span class="p">)</span>
+</code></pre>
+
+<p>It&rsquo;s also possible to create fingerprints from several local and remote identities, e.g. in a group conversation setting.</p>
+<h1 id='legal-things' class='heading'>Legal things</h1>
+<h2 id='cryptography-notice' class='heading'>Cryptography Notice</h2>
+
+<p>This distribution includes cryptographic software. The country in which you currently reside may have restrictions on the import, possession, use, and/or re-export to another country, of encryption software.
+BEFORE using any encryption software, please check your country&rsquo;s laws, regulations and policies concerning the import, possession, or use, and re-export of encryption software, to see if this is permitted.
+See <a href="http://www.wassenaar.org/">http://www.wassenaar.org/</a> for more information.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p><code>libsignal-protocol-swift</code> is under the GPLv3: <a href="http://www.gnu.org/licenses/gpl-3.0.html">http://www.gnu.org/licenses/gpl-3.0.html</a></p>
+
+<p><code>libsignal-protocol-c</code> is copyright (2015-2016) of Open Whisper Systems, and licensed under the GPLv3.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/christophhagen" target="_blank" rel="external">Christoph Hagen</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

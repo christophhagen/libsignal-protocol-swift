@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SessionStore Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/SessionStore" class="dashAnchor"></a>
+    <a title="SessionStore Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/christophhagen/libsignal-protocol-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SessionStore Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Fingerprint.html">Fingerprint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupCipher.html">GroupCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupSessionBuilder.html">GroupSessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionBuilder.html">SessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionCipher.html">SessionCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Signal.html">Signal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalAddress.html">SignalAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalSenderKeyName.html">SignalSenderKeyName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalStore.html">SignalStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SignalError.html">SignalError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/IdentityKeyStore.html">IdentityKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PreKeyStore.html">PreKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SenderKeyStore.html">SenderKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SessionStore.html">SessionStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SignedPreKeyStore.html">SignedPreKeyStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage.html">CiphertextMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage/MessageType.html">– MessageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/KeyPair.html">KeyPair</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKey.html">SessionPreKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKeyBundle.html">SessionPreKeyBundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionSignedPreKey.html">SessionSignedPreKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SessionStore</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SessionStore</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>SessionStore</code>protocol must be adopted to provide the storage for sessions.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol12SessionStoreP04loadC010Foundation4DataV7session_AGSg10userRecordtSgAA0A7AddressC3for_tF"></a>
+                    <a name="//apple_ref/swift/Method/loadSession(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol12SessionStoreP04loadC010Foundation4DataV7session_AGSg10userRecordtSgAA0A7AddressC3for_tF">loadSession(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of the serialized session record corresponding to the
+provided recipient ID + device ID tuple.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadSession</span><span class="p">(</span><span class="k">for</span> <span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Classes/SignalAddress.html">SignalAddress</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">session</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">userRecord</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The address of the remote client</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The session and optional user record, or nil on failure</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol12SessionStoreP17subDeviceSessionsSays5Int32VGSgSS3for_tF"></a>
+                    <a name="//apple_ref/swift/Method/subDeviceSessions(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol12SessionStoreP17subDeviceSessionsSays5Int32VGSgSS3for_tF">subDeviceSessions(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all known devices with active sessions for a recipient</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">subDeviceSessions</span><span class="p">(</span><span class="k">for</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Int32</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the remote client</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The ids of all active devices</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol12SessionStoreP5storeSb10Foundation4DataV7session_AA0A7AddressC3forAGSg10userRecordtF"></a>
+                    <a name="//apple_ref/swift/Method/store(session:for:userRecord:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol12SessionStoreP5storeSb10Foundation4DataV7session_AA0A7AddressC3forAGSg10userRecordtF">store(session:for:userRecord:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Commit to storage the session record for a given
+recipient ID + device ID tuple.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">store</span><span class="p">(</span><span class="nv">session</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="k">for</span> <span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Classes/SignalAddress.html">SignalAddress</a></span><span class="p">,</span> <span class="nv">userRecord</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The serialized session record</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userRecord</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Application specific data to be stored alongside the serialized session record for the remote client. If no such data exists, then this parameter will be nil.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The address of the remote client</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on sucess, <code>false</code> on failure.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol12SessionStoreP08containsC0SbAA0A7AddressC3for_tF"></a>
+                    <a name="//apple_ref/swift/Method/containsSession(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol12SessionStoreP08containsC0SbAA0A7AddressC3for_tF">containsSession(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Determine whether there is a committed session record for a
+recipient ID + device ID tuple.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">containsSession</span><span class="p">(</span><span class="k">for</span> <span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Classes/SignalAddress.html">SignalAddress</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The address of the remote client</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if a session record exists, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol12SessionStoreP06deleteC0SbSgAA0A7AddressC3for_tF"></a>
+                    <a name="//apple_ref/swift/Method/deleteSession(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol12SessionStoreP06deleteC0SbSgAA0A7AddressC3for_tF">deleteSession(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove a session record for a recipient ID + device ID tuple.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteSession</span><span class="p">(</span><span class="k">for</span> <span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Classes/SignalAddress.html">SignalAddress</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The address of the remote client</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if a session was deleted, <code>false</code> if a session was not deleted, nil on error</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol12SessionStoreP17deleteAllSessionsSiSgSS3for_tF"></a>
+                    <a name="//apple_ref/swift/Method/deleteAllSessions(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol12SessionStoreP17deleteAllSessionsSiSgSS3for_tF">deleteAllSessions(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove the session records corresponding to all devices of a recipient Id.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteAllSessions</span><span class="p">(</span><span class="k">for</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the remote client</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The number of deleted sessions on success, nil on failure</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol12SessionStoreP7destroyyyF"></a>
+                    <a name="//apple_ref/swift/Method/destroy()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol12SessionStoreP7destroyyyF">destroy()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Function called to perform cleanup when the data store context is being
+destroyed.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Function called to perform cleanup when the data store context is being
+destroyed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">destroy</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/christophhagen" target="_blank" rel="external">Christoph Hagen</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

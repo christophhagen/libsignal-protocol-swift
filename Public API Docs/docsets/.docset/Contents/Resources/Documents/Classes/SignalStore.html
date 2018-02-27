@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SignalStore Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SignalStore" class="dashAnchor"></a>
+    <a title="SignalStore Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/christophhagen/libsignal-protocol-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SignalStore Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Fingerprint.html">Fingerprint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupCipher.html">GroupCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupSessionBuilder.html">GroupSessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionBuilder.html">SessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionCipher.html">SessionCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Signal.html">Signal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalAddress.html">SignalAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalSenderKeyName.html">SignalSenderKeyName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalStore.html">SignalStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SignalError.html">SignalError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/IdentityKeyStore.html">IdentityKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PreKeyStore.html">PreKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SenderKeyStore.html">SenderKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SessionStore.html">SessionStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SignedPreKeyStore.html">SignedPreKeyStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage.html">CiphertextMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage/MessageType.html">– MessageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/KeyPair.html">KeyPair</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKey.html">SessionPreKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKeyBundle.html">SessionPreKeyBundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionSignedPreKey.html">SessionSignedPreKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SignalStore</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SignalStore</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>SignalStore</code> provides access to all required data stores for a client.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol0A5StoreC011identityKeyC0AA08IdentityeC0_pv"></a>
+                    <a name="//apple_ref/swift/Property/identityKeyStore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol0A5StoreC011identityKeyC0AA08IdentityeC0_pv">identityKeyStore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate that handles the identity key store operations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identityKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/IdentityKeyStore.html">IdentityKeyStore</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol0A5StoreC06preKeyC0AA03PreeC0_pv"></a>
+                    <a name="//apple_ref/swift/Property/preKeyStore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol0A5StoreC06preKeyC0AA03PreeC0_pv">preKeyStore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate that handles the pre key store operations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">preKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PreKeyStore.html">PreKeyStore</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol0A5StoreC07sessionC0AA07SessionC0_pv"></a>
+                    <a name="//apple_ref/swift/Property/sessionStore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol0A5StoreC07sessionC0AA07SessionC0_pv">sessionStore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate that handles the session store operations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sessionStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SessionStore.html">SessionStore</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol0A5StoreC012signedPreKeyC0AA06SignedefC0_pv"></a>
+                    <a name="//apple_ref/swift/Property/signedPreKeyStore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol0A5StoreC012signedPreKeyC0AA06SignedefC0_pv">signedPreKeyStore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate that handles the signed pre key store operations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">signedPreKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SignedPreKeyStore.html">SignedPreKeyStore</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol0A5StoreC09senderKeyC0AA06SendereC0_pSgv"></a>
+                    <a name="//apple_ref/swift/Property/senderKeyStore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol0A5StoreC09senderKeyC0AA06SendereC0_pSgv">senderKeyStore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate that handles the sender key store operations, optional</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">senderKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SenderKeyStore.html">SenderKeyStore</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol0A5StoreCAcA011IdentityKeyC0_p08identityeC0_AA03PreeC0_p03preeC0AA07SessionC0_p07sessionC0AA06SignedgeC0_p06signedgeC0AA06SendereC0_pSg06sendereC0tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(identityKeyStore:preKeyStore:sessionStore:signedPreKeyStore:senderKeyStore:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol0A5StoreCAcA011IdentityKeyC0_p08identityeC0_AA03PreeC0_p03preeC0AA07SessionC0_p07sessionC0AA06SignedgeC0_p06signedgeC0AA06SendereC0_pSg06sendereC0tKcfc">init(identityKeyStore:preKeyStore:sessionStore:signedPreKeyStore:senderKeyStore:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a <code>SignalStore</code> with the necessary delegates.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">identityKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/IdentityKeyStore.html">IdentityKeyStore</a></span><span class="p">,</span>
+         <span class="nv">preKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PreKeyStore.html">PreKeyStore</a></span><span class="p">,</span>
+         <span class="nv">sessionStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SessionStore.html">SessionStore</a></span><span class="p">,</span>
+         <span class="nv">signedPreKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SignedPreKeyStore.html">SignedPreKeyStore</a></span><span class="p">,</span>
+         <span class="nv">senderKeyStore</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SenderKeyStore.html">SenderKeyStore</a></span><span class="p">?)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>identityKeyStore</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The identity key store for this instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>preKeyStore</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The pre key store for this instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionStore</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session store for this instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>signedPreKeyStore</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The signed pre key store for this instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>senderKeyStore</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The (optional) sender key store for this instance, only needed for group messages</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/christophhagen" target="_blank" rel="external">Christoph Hagen</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

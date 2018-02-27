@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GroupCipher Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/GroupCipher" class="dashAnchor"></a>
+    <a title="GroupCipher Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/christophhagen/libsignal-protocol-swift"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        GroupCipher Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Fingerprint.html">Fingerprint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupCipher.html">GroupCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupSessionBuilder.html">GroupSessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionBuilder.html">SessionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionCipher.html">SessionCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Signal.html">Signal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalAddress.html">SignalAddress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalSenderKeyName.html">SignalSenderKeyName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignalStore.html">SignalStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SignalError.html">SignalError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/IdentityKeyStore.html">IdentityKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PreKeyStore.html">PreKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SenderKeyStore.html">SenderKeyStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SessionStore.html">SessionStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SignedPreKeyStore.html">SignedPreKeyStore</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage.html">CiphertextMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CiphertextMessage/MessageType.html">– MessageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/KeyPair.html">KeyPair</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKey.html">SessionPreKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionPreKeyBundle.html">SessionPreKeyBundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SessionSignedPreKey.html">SessionSignedPreKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>GroupCipher</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">GroupCipher</span></code></pre>
+
+                </div>
+              </div>
+            <p>The main entry point for Signal Protocol group encrypt/decrypt operations.</p>
+
+<p>Once a session has been established with <code><a href="../Classes/GroupSessionBuilder.html">GroupSessionBuilder</a></code> and a
+sender key distribution message has been distributed to each member of
+the group, this class can be used for all subsequent encrypt/decrypt
+operations within that session (i.e. until group membership changes).</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11GroupCipherCAcA0A13SenderKeyNameC3for_AA0A5StoreC2intcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(for:in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11GroupCipherCAcA0A13SenderKeyNameC3for_AA0A5StoreC2intcfc">init(for:in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Construct a group cipher for encrypt/decrypt operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="k">for</span> <span class="nv">remoteAddress</span><span class="p">:</span> <span class="kt"><a href="../Classes/SignalSenderKeyName.html">SignalSenderKeyName</a></span><span class="p">,</span> <span class="k">in</span> <span class="nv">store</span><span class="p">:</span> <span class="kt"><a href="../Classes/SignalStore.html">SignalStore</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteAddress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The groupId + sender</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>store</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key store</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11GroupCipherC7encryptAA17CiphertextMessageV10Foundation4DataVKF"></a>
+                    <a name="//apple_ref/swift/Method/encrypt(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11GroupCipherC7encryptAA17CiphertextMessageV10Foundation4DataVKF">encrypt(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encrypt a message.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors are:
+
+</div>
+<li><code>noSession</code> if there is no established session for this contact.</li>
+<li><code>invalidKey</code> if there is no valid private key for this session.</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CiphertextMessage.html">CiphertextMessage</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message data to encrypt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The ciphertext message encrypted to the group+sender+device tuple.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11GroupCipherC7decrypt10Foundation4DataVAA17CiphertextMessageVKF"></a>
+                    <a name="//apple_ref/swift/Method/decrypt(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11GroupCipherC7decrypt10Foundation4DataVAA17CiphertextMessageVKF">decrypt(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decrypt a message.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors:
+
+</div>
+<li><code>invalidArgument</code> if the ciphertext type is not <code>senderKey</code></li>
+<li><code>invalidMessage</code> if the input is not valid ciphertext</li>
+<li><code>duplicateMessage</code> if the input is a message that has already been received</li>
+<li><code>legaceMessage</code> if the input is a message formatted by a protocol version that
+is no longer supported</li>
+<li><code>noSession</code> if there is no established session for this contact</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt"><a href="../Structs/CiphertextMessage.html">CiphertextMessage</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sender key message data to decrypt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decrypted message data</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14SignalProtocol11GroupCipherC7decrypt10Foundation4DataVAGKF"></a>
+                    <a name="//apple_ref/swift/Method/decrypt(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14SignalProtocol11GroupCipherC7decrypt10Foundation4DataVAGKF">decrypt(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decrypt a message.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors:
+
+</div>
+<li><code>invalidMessage</code> if the input is not valid ciphertext</li>
+<li><code>duplicateMessage</code> if the input is a message that has already been received</li>
+<li><code>legaceMessage</code> if the input is a message formatted by a protocol version that
+is no longer supported</li>
+<li><code>noSession</code> if there is no established session for this contact</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Errors of type <code><a href="../Enums/SignalError.html">SignalError</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sender key message data to decrypt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The decrypted message on success</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/christophhagen" target="_blank" rel="external">Christoph Hagen</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

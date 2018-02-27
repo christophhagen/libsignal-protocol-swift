@@ -6,7 +6,11 @@ environments.
 
 ## Installation
 
-TODO: Cocoapods setup
+You can install `libsignal-protocol-swift` through Cocoapods, by adding to your podfile:
+
+```ruby
+pod libsignal-protocol-swift
+```
 
 ## Library initialization
 

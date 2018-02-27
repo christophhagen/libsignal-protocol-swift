@@ -6,11 +6,9 @@ environments.
 
 ## Installation
 
-You can install `libsignal-protocol-swift` through Cocoapods, by adding to your podfile:
+So far, integration of the framework into other projects is not working through Cocoapods. I'm working on some unresolved errors regarding missing modules.
 
-````ruby
-pod libsignal-protocol-swift
-````
+It should be possible to download the framework and add it to an existing Xcode workspace.
 
 ## Library initialization
 

@@ -1,9 +1,9 @@
 Pod::Spec.new do |spec|
-    spec.name = 'lib signal-protocol-swift'
+    spec.name = 'libsignal-protocol-swift'
     spec.summary = 'A Swift wrapper framework for libsignal-protocol-c'
     spec.license = 'GPLv3'
 
-    spec.version = '0.1'
+    spec.version = '0.2'
     spec.source = {
         :git => 'https://github.com/christophhagen/libsignal-protocol-swift.git',
         :tag => spec.version

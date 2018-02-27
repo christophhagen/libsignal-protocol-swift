@@ -8,9 +8,9 @@ environments.
 
 You can install `libsignal-protocol-swift` through Cocoapods, by adding to your podfile:
 
-```ruby
+````ruby
 pod libsignal-protocol-swift
-```
+````
 
 ## Library initialization
 
@@ -18,9 +18,9 @@ In contrast to `libsignal-protocol-c` there is no need to initialize a global
 context or do any other setup before usage. `libsignal-protocol-swift` uses
 the built-in `CommonCrypto` library for cryptographic functions. Simply:
 
-```swift
+````swift
 import SignalProtocol
-```
+````
 
 ## Client install time
 

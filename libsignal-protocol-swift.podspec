@@ -21,5 +21,6 @@ Pod::Spec.new do |spec|
 
     spec.source_files = 'libsignal-protocol-swift/**/*.{swift,c,h}'
     spec.public_header_files = ''
+    spec.private_header_files = 'libsignal-protocol-swift/**/*.h'
     
 end

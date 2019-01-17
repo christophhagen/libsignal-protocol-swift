@@ -1998,7 +1998,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This if-statement means we'll only run the main script if the SignalModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where SignalProtocol is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${BUILT_PRODUCTS_DIR}/SignalModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/SignalModuleMap directory already exists, not creating module map.\"\nelse\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/SignalModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/SignalModuleMap/module.modulemap\"\nmodule SignalModule [system] {\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/signal_protocol.h\"\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/key_helper.h\"\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/session_builder.h\"\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/session_cipher.h\"\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/protocol.h\"\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/group_session_builder.h\"\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/group_cipher.h\"\n    header \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/fingerprint.h\"\n    export *\n}\nEOF\nfi\n\nif [ -d \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap directory already exists, not creating module map.\"\nelse\nmkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCryptoModuleMap/module.modulemap\"\nmodule CommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF\nfi\n";
+			shellScript = "# This if-statement means we'll only run the main script if the SignalModuleMap directory doesn't exist\n# Because otherwise the rest of the script causes a full recompile for anything where SignalProtocol is a dependency\n# Do a \"Clean Build Folder\" to remove this directory and trigger the rest of the script to run\nif [ -d \"${BUILT_PRODUCTS_DIR}/SignalModuleMap\" ]; then\necho \"${BUILT_PRODUCTS_DIR}/SignalModuleMap directory already exists, not creating module map.\"\nelse\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/SignalModuleMap\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/SignalModuleMap/module.modulemap\"\nmodule SignalModule [system] {\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/signal_protocol.h\"\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/key_helper.h\"\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/session_builder.h\"\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/session_cipher.h\"\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/protocol.h\"\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/group_session_builder.h\"\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/group_cipher.h\"\nheader \"${SRCROOT}/libsignal-protocol-swift/libsignal-protocol-c/fingerprint.h\"\nexport *\n}\nEOF\nfi\n\nCOMMON_CRYPTO_DIR=\"${SDKROOT}/usr/include/CommonCrypto\"\nif [ -f \"${COMMON_CRYPTO_DIR}/module.modulemap\" ]; then :; fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2636,6 +2636,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2691,6 +2692,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2724,7 +2726,7 @@
 				PRODUCT_NAME = SignalProtocol;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2755,7 +2757,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "christophhagen.libsignal-protocol-swift";
 				PRODUCT_NAME = SignalProtocol;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2774,7 +2776,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "christophhagen.libsignal-protocol-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2793,7 +2795,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "christophhagen.libsignal-protocol-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2829,7 +2831,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2863,7 +2865,7 @@
 				PRODUCT_NAME = SignalProtocol;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -2895,7 +2897,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.3;
 			};
@@ -2928,7 +2930,7 @@
 				PRODUCT_NAME = SignalProtocol;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.3;
 			};
@@ -2963,7 +2965,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -2997,7 +2999,7 @@
 				PRODUCT_NAME = SignalProtocol;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};

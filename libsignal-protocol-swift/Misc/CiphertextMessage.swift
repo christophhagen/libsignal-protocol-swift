@@ -71,7 +71,7 @@ public struct CiphertextMessage {
      - parameter type: The message type
      - parameter data: The encrypted data
      */
-    init(type: MessageType, message: Data) {
+    public init(type: MessageType, message: Data) {
         self.type = type
         self.message = message
     }

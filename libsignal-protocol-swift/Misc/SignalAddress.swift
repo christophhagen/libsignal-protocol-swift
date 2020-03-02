@@ -39,7 +39,8 @@ public final class SignalAddress {
         self.name = name
         self.deviceId = deviceId
         let count = name.utf8.count
-        self.namePointer = UnsafeMutablePointer<Int8>.allocate(capacity: count)
+        // From: https://github.com/christophhagen/libsignal-protocol-swift/issues/2
+        self.namePointer = UnsafeMutablePointer<Int8>(mutating: (name as NSString).utf8String!)
         namePointer.assign(from: name, count: count)
         self.address = UnsafeMutablePointer<signal_protocol_address>.allocate(capacity: 1)
         address.pointee = signal_protocol_address(name: namePointer, name_len: count, device_id: deviceId)
@@ -60,7 +61,6 @@ public final class SignalAddress {
     }
 
     deinit {
-        namePointer.deallocate()
         signalAddress.deallocate()
     }
 }

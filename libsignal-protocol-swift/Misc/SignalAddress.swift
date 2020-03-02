@@ -41,7 +41,6 @@ public final class SignalAddress {
         let count = name.utf8.count
         // From: https://github.com/christophhagen/libsignal-protocol-swift/issues/2
         self.namePointer = UnsafeMutablePointer<Int8>(mutating: (name as NSString).utf8String!)
-        namePointer.assign(from: name, count: count)
         self.address = UnsafeMutablePointer<signal_protocol_address>.allocate(capacity: 1)
         address.pointee = signal_protocol_address(name: namePointer, name_len: count, device_id: deviceId)
     }

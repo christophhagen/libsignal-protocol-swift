@@ -85,4 +85,53 @@ class libsignal_protocol_swiftTests: XCTestCase {
 
         XCTAssert(decryptedMessage == message, "Invalid decrypted text")
     }
+    
+    func testAddresses () {
+        guard let ownStore = setupStore(makeKeys: true) else {
+            XCTFail("Could not create store")
+            return
+        }
+        
+        guard let remoteStore = setupStore(makeKeys: false) else {
+            XCTFail("Could not create remote store")
+            return
+        }
+        
+        let testNames = [ "sessions:1", "1"]
+        for testName in testNames {
+            let address = SignalAddress(name: testName, deviceId: 0)
+
+            let bundle: SessionPreKeyBundle
+            do {
+                let preKeyData = ownStore.preKeyStore.load(preKey: 1)!
+                let preKey = try SessionPreKey(from: preKeyData)
+                let signedPreKey = try SessionSignedPreKey(from: ownStore.signedPreKeyStore.load(signedPreKey: 1)!)
+
+                bundle = SessionPreKeyBundle(
+                    registrationId: ownStore.identityKeyStore.localRegistrationId()!,
+                    deviceId: address.deviceId,
+                    preKeyId: preKey.id,
+                    preKey: preKey.keyPair.publicKey,
+                    signedPreKeyId: signedPreKey.id,
+                    signedPreKey: signedPreKey.keyPair.publicKey,
+                    signature: signedPreKey.signature,
+                    identityKey: ownStore.identityKeyStore.identityKeyPair()!.publicKey)
+            } catch {
+                XCTFail("Could not create pre key bundle: \(error)")
+                return
+            }
+
+
+            print("Processing bundle for odd address...")
+
+            do {
+                try SessionBuilder(for: address, in: remoteStore).process(preKeyBundle: bundle)
+            } catch {
+                XCTFail("Could not process pre key bundle")
+                return
+            }
+
+            XCTAssert(remoteStore.sessionStore.containsSession(for: address), "Odd address for processed pre key bundle not in session store")
+        }
+    }
 }

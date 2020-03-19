@@ -209,7 +209,6 @@ int session_builder_process_pre_key_bundle(session_builder *builder, session_pre
     assert(builder->store);
     assert(bundle);
     signal_lock(builder->global_context);
-
     result = signal_protocol_identity_is_trusted_identity(builder->store,
             builder->remote_address,
             session_pre_key_bundle_get_identity_key(bundle));

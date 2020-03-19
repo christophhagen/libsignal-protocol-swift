@@ -65,7 +65,11 @@ public final class SignalSenderKeyName {
             let sender = SignalAddress(from: address.sender) else {
             return nil
         }
-        self.init(groupId: String(cString: groupPtr), sender: sender)
+        if let str = NSString(bytes: groupPtr, length: address.group_id_len, encoding: String.Encoding.utf8.rawValue) as String? {
+            self.init(groupId: str, sender: sender)
+        } else {
+            self.init(groupId: String(cString: groupPtr), sender: sender)
+        }
     }
 }
 

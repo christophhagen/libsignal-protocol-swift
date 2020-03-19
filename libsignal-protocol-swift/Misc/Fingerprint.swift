@@ -214,6 +214,8 @@ public class Fingerprint {
         guard result == 0 else { throw SignalError(value: result) }
         defer { signal_buffer_free(scannableBuffer) }
 
+        // TODO: I think this is also wrong, but I can't figure out how long
+        // this is supposed to be.  I guess I'll leave it be for now?
         self.displayable = String.init(cString: dPtr)
         self.scannable = Data(signalBuffer: scannableBuffer!)
     }

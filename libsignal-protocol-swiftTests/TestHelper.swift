@@ -75,6 +75,7 @@ func setupStore(makeKeys: Bool) -> SignalStore? {
 
         // Store signed pre key
         do {
+            print("Sigend PreKeyID: \(signedPreKey.id)")
             (store.signedPreKeyStore as! TestSignedPrekeyStore).keys[signedPreKey.id] = try signedPreKey.data()
         } catch {
             print("Could not serialize signed pre key: \(error)")

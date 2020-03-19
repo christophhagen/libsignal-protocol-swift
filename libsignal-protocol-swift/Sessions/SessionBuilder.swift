@@ -52,13 +52,10 @@ public final class SessionBuilder {
         var result = withUnsafeMutablePointer(to: &builder) {
             session_builder_create($0, store.storeContext, remoteAddress.signalAddress, Signal.context)
         }
-        
         guard result == 0 else { throw SignalError(value: result) }
         defer { session_builder_free(builder) }
-
         let bundle = try preKeyBundle.pointer()
         defer { session_pre_key_bundle_destroy(bundle) }
-
         result = session_builder_process_pre_key_bundle(builder, bundle)
         guard result == 0 else { throw SignalError(value: result) }
     }

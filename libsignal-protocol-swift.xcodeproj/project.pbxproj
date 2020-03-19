@@ -2740,7 +2740,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = RU829Y5CY7;
+				DEVELOPMENT_TEAM = H8WR4M6QQ4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2756,7 +2756,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "itftwbr.libsignal-protocol-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "christophhagen.libsignal-protocol-swift";
 				PRODUCT_NAME = SignalProtocol;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2770,7 +2770,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RU829Y5CY7;
+				DEVELOPMENT_TEAM = H8WR4M6QQ4;
 				INFOPLIST_FILE = "libsignal-protocol-swiftTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2788,9 +2788,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RU829Y5CY7;
+				DEVELOPMENT_TEAM = H8WR4M6QQ4;
 				INFOPLIST_FILE = "libsignal-protocol-swiftTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

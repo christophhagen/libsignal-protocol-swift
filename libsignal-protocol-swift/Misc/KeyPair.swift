@@ -25,7 +25,7 @@ public struct KeyPair {
      - parameter publicKey: The public key data
      - parameter privateKey: The private key data
      */
-    init(publicKey: Data, privateKey: Data) {
+    public init(publicKey: Data, privateKey: Data) {
         self.publicKey = publicKey
         self.privateKey = privateKey
     }

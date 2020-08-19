@@ -26,11 +26,13 @@ class TestIdentityStore: IdentityKeyStore {
     }
 
     func save(identity: Data?, for address: SignalAddress) -> Bool {
+        print("Saving idneitty for \(address.name)")
         keys[address] = identity
         return true
     }
 
     func isTrusted(identity: Data, for address: SignalAddress) -> Bool? {
+        print("Checking Identity for: \(address.name)")
         guard let savedIdentity = keys[address] else {
             return true
         }

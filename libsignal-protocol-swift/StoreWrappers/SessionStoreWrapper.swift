@@ -109,7 +109,12 @@ func getSubDeviceSessions(
         return SignalError.noSignalAddress.rawValue
     }
 
-    let nameString = String(cString: namePtr)
+    let nameString : String
+    if let name = NSString(bytes: namePtr, length: nameLength, encoding: String.Encoding.utf8.rawValue) as String? {
+        nameString = name
+    } else {
+        nameString = String(cString: namePtr)
+    }
 
     guard let results = delegate.subDeviceSessions(for: nameString) else {
         return SignalError.notSuccessful.rawValue
@@ -245,8 +250,13 @@ func deleteAllSessions(
         return SignalError.noSignalAddress.rawValue
     }
 
-    let nameString = String(cString: namePtr)
-
+    let nameString : String
+    if let name = NSString(bytes: namePtr, length: nameLength, encoding: String.Encoding.utf8.rawValue) as String? {
+        nameString = name
+    } else {
+        nameString = String(cString: namePtr)
+    }
+    
     guard let result = delegate.deleteAllSessions(for: nameString) else {
         return SignalError.notSuccessful.rawValue
     }

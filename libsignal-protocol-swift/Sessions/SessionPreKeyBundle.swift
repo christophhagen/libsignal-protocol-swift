@@ -15,28 +15,28 @@ import SignalModule
 public struct SessionPreKeyBundle {
 
     /// The registration id of the remote party
-    let registrationId: UInt32
+    public let registrationId: UInt32
 
     /// The device id of the remote party
-    let deviceId: Int32
+    public let deviceId: Int32
 
     /// The pre key id
-    let preKeyId: UInt32
+    public let preKeyId: UInt32
 
     /// The pre key public data
-    let preKey: Data
+    public let preKey: Data
 
     /// The signed pre key id
-    let signedPreKeyId: UInt32
+    public let signedPreKeyId: UInt32
 
     /// The signed pre key public data
-    let signedPreKey: Data
+    public let signedPreKey: Data
 
     /// The signature of the signed pre key
-    let signature: Data
+    public let signature: Data
 
     /// The identity public key of the remote party
-    let identityKey: Data
+    public let identityKey: Data
 
     /**
      Create a pre key bundle from the components

@@ -10,8 +10,6 @@
 #include "protocol.h"
 #include "signal_protocol_internal.h"
 
-#include "stdio.h"
-
 struct session_cipher
 {
     signal_protocol_store_context *store;
@@ -414,7 +412,6 @@ static int session_cipher_decrypt_from_record_and_signal_message(session_cipher 
         SIGNAL_UNREF(state_copy);
     }
 
-
     previous_states_node = session_record_get_previous_states_head(record);
     while(previous_states_node) {
         state = session_record_get_previous_states_element(previous_states_node);
@@ -747,6 +744,7 @@ int session_cipher_get_remote_registration_id(session_cipher *cipher, uint32_t *
     id_result = session_state_get_remote_registration_id(state);
 
 complete:
+    SIGNAL_UNREF(record);
     if(result >= 0) {
         *remote_id = id_result;
     }
@@ -787,6 +785,7 @@ int session_cipher_get_session_version(session_cipher *cipher, uint32_t *version
     version_result = session_state_get_session_version(state);
 
 complete:
+    SIGNAL_UNREF(record);
     if(result >= 0) {
         *version = version_result;
     }

@@ -56,7 +56,11 @@ public final class SignalAddress {
         guard let namePtr = address.name else {
             return nil
         }
-        self.init(name: String(cString: namePtr), deviceId: address.device_id)
+        if let name = NSString(bytes: namePtr, length: address.name_len, encoding: String.Encoding.utf8.rawValue) as String? {
+            self.init(name: name, deviceId: address.device_id)
+        } else {
+            self.init(name: String(cString: namePtr), deviceId: address.device_id)
+        }
     }
 
     deinit {

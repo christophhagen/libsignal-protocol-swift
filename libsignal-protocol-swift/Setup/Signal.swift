@@ -46,7 +46,7 @@ public extension Signal {
     static func generateIdentityKeyPair() throws -> KeyPair {
         // Create key pair
         var keyPair: OpaquePointer? = nil
-        var result = withUnsafeMutablePointer(to: &keyPair) {
+        let result = withUnsafeMutablePointer(to: &keyPair) {
             signal_protocol_key_helper_generate_identity_key_pair($0, Signal.context)
         }
         guard result == 0 else { throw SignalError(value: result) }
@@ -122,7 +122,7 @@ public extension Signal {
         let pointer = try identity.pointer()
         defer { ec_key_pair_destroy(pointer) }
         var keyPtr: OpaquePointer? = nil
-        var result = withUnsafeMutablePointer(to: &keyPtr) {
+        let result = withUnsafeMutablePointer(to: &keyPtr) {
             signal_protocol_key_helper_generate_signed_pre_key($0, pointer, signedPreKey, timestamp, Signal.context)
         }
         guard result == 0 else { throw SignalError(value: result) }

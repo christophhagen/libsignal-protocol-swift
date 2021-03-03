@@ -83,5 +83,9 @@ extension SignalAddress: Hashable {
     public var hashValue: Int {
         return name.hashValue &+ deviceId.hashValue
     }
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(deviceId)
+    }
 }
 

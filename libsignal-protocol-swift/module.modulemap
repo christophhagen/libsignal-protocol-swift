@@ -1,0 +1,14 @@
+module SignalModule [system] {
+    header "SignalProtocol.h"
+    header "Setup/setup.h"
+    header "libsignal-protocol-c/signal_protocol.h"
+    header "libsignal-protocol-c/signal_protocol.h"
+    header "libsignal-protocol-c/key_helper.h"
+    header "libsignal-protocol-c/session_builder.h"
+    header "libsignal-protocol-c/session_cipher.h"
+    header "libsignal-protocol-c/protocol.h"
+    header "libsignal-protocol-c/group_session_builder.h"
+    header "libsignal-protocol-c/group_cipher.h"
+    header "libsignal-protocol-c/fingerprint.h"
+    export *
+}

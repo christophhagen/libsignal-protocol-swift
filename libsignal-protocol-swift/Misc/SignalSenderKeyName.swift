@@ -37,7 +37,7 @@ public final class SignalSenderKeyName {
         self.groupId = groupId
         self.sender = sender
         let count = groupId.utf8.count
-        self.groupPointer = UnsafeMutablePointer<Int8>.allocate(capacity: count)
+        self.groupPointer = UnsafeMutablePointer<Int8>(mutating: (groupId as NSString).utf8String!)
         groupPointer.assign(from: groupId, count: count)
         self.address = UnsafeMutablePointer<signal_protocol_sender_key_name>.allocate(capacity: 1)
 
@@ -86,8 +86,9 @@ extension SignalSenderKeyName: Equatable {
 extension SignalSenderKeyName: Hashable {
 
     /// The hash of the sender key name
-    public var hashValue: Int {
-        return groupId.hashValue &+ sender.hashValue
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(groupId)
+        hasher.combine(sender)
     }
 
 }
